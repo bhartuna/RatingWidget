@@ -1,0 +1,92 @@
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+.widget{
+	background: rgb(255, 71, 69);
+	bottom: -100px;
+	border-radius: 35px;
+	opacity: 0.00;
+	position: fixed;
+	right: -100px;
+
+	-moz-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.widget:hover{
+	background: rgb(215, 31, 29);
+	cursor: pointer;
+}
+.showWidget{
+	opacity: 1.00;
+}
+.formWidget{
+	background: rgb(255, 255, 255);
+	border-radius: 4px;
+	box-shadow: 0px 0px 2px rgb(100, 100, 100);
+	height: 0px;
+	position: fixed;
+	width: 0px;
+
+	-moz-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+/* RWD */
+@media (min-width: 1320px){
+	.widget{
+		height: 70px;
+		width: 70px;
+	}
+	.showWidget{
+		bottom: 30px;
+		right: 30px;
+	}
+	.formWidget{
+		bottom: 65px;
+		right: 65px;
+	}
+	.showFormWidget{
+		height: 400px;
+		width: 300px;
+	}
+}
+@media (min-width: 820px) and (max-width: 1319px){
+	.widget{
+		height: 60px;
+		width: 60px;
+	}
+	.showWidget{
+		bottom: 22px;
+		right: 22px;
+	}
+	.formWidget{
+		bottom: 52px;
+		right: 52px;
+	}
+	.showFormWidget{
+		height: 300px;
+		width: 200px;
+	}
+}
+@media (max-width: 819px){
+	.widget{
+		height: 50px;
+		width: 50px;
+	}
+	.showWidget{
+		bottom: 14px;
+		right: 14px;
+	}
+	.formWidget{
+		bottom: 39px;
+		right: 39px;
+	}
+	.showFormWidget{
+		height: calc(100% - 78px);
+		width: calc(100% - 78px);
+	}
+}
